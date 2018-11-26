@@ -16,7 +16,9 @@ class User extends Authenticatable
     }
 
 
-
+    public function getUrlAttribute() {
+        return ('#');
+    }
 
     /**
      * The attributes that are mass assignable.
