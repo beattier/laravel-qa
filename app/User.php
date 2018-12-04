@@ -10,9 +10,15 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
+    // Relationships
     public function questions() {
         return $this->hasMany(Question::class);
 
+    }
+
+    public function answer() {
+        return $this->hasMany(Answer::class);
     }
 
 
