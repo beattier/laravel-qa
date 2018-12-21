@@ -31,6 +31,11 @@ class Question extends Model
         return $this->created_at->diffForHumans();
     }
 
+    public function acceptBestAnswer(Answer $answer) {
+        $this->best_answer_id = $answer->id;
+        $this->save();
+    }
+
 
     public function getStatusAttribute() {
         if ($this->answers_count > 0) {
