@@ -32,4 +32,6 @@ class Answer extends Model
         return $this->created_at->diffForHumans();
     }
 
+    protected $fillable = ['body', 'user_id'];
+
 }
